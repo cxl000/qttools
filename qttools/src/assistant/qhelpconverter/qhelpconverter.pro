@@ -45,3 +45,7 @@ FORMS   += inputpage.ui \
            outputpage.ui
 
 RESOURCES += qhelpconverter.qrc
+
+# Link with QtHelp
+# Requires linking with QtCLucene
+LIBS += -L../../lib -L../../lib/fulltextsearch -lQt5CLucene
