@@ -54,7 +54,7 @@
 #define QSIMPLERESOURCE_H
 
 #include "shared_global_p.h"
-#include "abstractformbuilder.h"
+#include <QtDesigner/abstractformbuilder.h>
 #include <QtCore/QStringList>
 
 QT_BEGIN_NAMESPACE

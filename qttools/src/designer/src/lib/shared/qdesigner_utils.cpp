@@ -41,9 +41,9 @@
 
 #include "qdesigner_utils_p.h"
 #include "qdesigner_propertycommand_p.h"
-#include "abstractformbuilder.h"
 #include "formwindowbase_p.h"
 
+#include <QtDesigner/abstractformbuilder.h>
 #include <QtDesigner/QDesignerFormEditorInterface>
 #include <QtDesigner/QDesignerFormWindowInterface>
 #include <QtDesigner/QDesignerResourceBrowserInterface>

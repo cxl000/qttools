@@ -49,7 +49,7 @@
 #include "shared_enums_p.h"
 #include "metadatabase_p.h"
 #include "formwindowbase_p.h"
-#include <abstractformbuilder.h>
+#include <QtDesigner/abstractformbuilder.h>
 
 #include <QtDesigner/QDesignerFormWindowInterface>
 #include <QtDesigner/QDesignerFormEditorInterface>
