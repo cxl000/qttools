@@ -5,5 +5,6 @@ SOURCES += ../shared/helpgenerator.cpp \
     ../shared/collectionconfiguration.cpp
 HEADERS += ../shared/helpgenerator.h \
     ../shared/collectionconfiguration.h
+LIBS += -L../../lib -lQt5CLucene
 
 load(qt_tool)

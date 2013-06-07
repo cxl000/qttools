@@ -96,6 +96,8 @@ FORMS += bookmarkdialog.ui \
 RESOURCES += assistant.qrc \
     assistant_images.qrc
 
+LIBS += -L../../lib -lQt5CLucene
+
 win32 {
     !wince*:LIBS += -lshell32
     RC_FILE = assistant.rc

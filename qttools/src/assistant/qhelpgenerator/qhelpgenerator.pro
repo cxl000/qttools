@@ -7,4 +7,6 @@ SOURCES += ../shared/helpgenerator.cpp \
 
 HEADERS += ../shared/helpgenerator.h
 
+LIBS += -L../../lib -lQt5CLucene
+
 load(qt_tool)
