@@ -1,11 +1,4 @@
 QT += help widgets
-TEMPLATE = app
-TARGET = qhelpconverter
-DESTDIR = $$QT.help.bins
-!build_pass:contains(QT_CONFIG, build_all): CONFIG += release
-
-target.path=$$[QT_INSTALL_BINS]
-INSTALLS += target
 
 SOURCES += conversionwizard.cpp \
            inputpage.cpp \
@@ -49,3 +42,5 @@ RESOURCES += qhelpconverter.qrc
 # Link with QtHelp
 # Requires linking with QtCLucene
 LIBS += -L../../lib -L../../lib/fulltextsearch -lQt5CLucene
+
+load(qt_app)
