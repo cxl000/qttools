@@ -143,7 +143,7 @@ applications that use QtDesigner
 
 
 %prep
-%setup -q -n %{name}-%{version}/qtwayland
+%setup -q -n %{name}-%{version}/qttools
 
 %build
 export QTDIR=/usr/share/qt5
