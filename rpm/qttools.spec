@@ -147,6 +147,7 @@ applications that use QtDesigner
 
 %build
 export QTDIR=/usr/share/qt5
+touch .git
 qmake -qt=5
 make %{?_smp_flags}
 
