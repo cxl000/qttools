@@ -20,6 +20,8 @@ mac {
     SUBDIRS += macdeployqt
 }
 
+SUBDIRS += kmap2qmap
+
 qtHaveModule(dbus): SUBDIRS += qdbus
 
 qtNomakeTools( \
