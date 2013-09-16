@@ -283,6 +283,13 @@ static const struct symbol_map_t symbol_map[] = {
     { "Pause",         Qt::Key_Pause },
     { "VolumeDown",    Qt::Key_VolumeDown },
     { "VolumeUp",      Qt::Key_VolumeUp },
+    { "MediaTogglePlayPause", Qt::Key_MediaTogglePlayPause },
+    { "MediaPlay",     Qt::Key_MediaPlay },
+    { "MediaPause",    Qt::Key_MediaPause },
+    { "MediaNext",     Qt::Key_MediaNext },
+    { "MediaPrevious", Qt::Key_MediaPrevious },
+    { "AudioForward",  Qt::Key_AudioForward },
+    { "AudioRewind",   Qt::Key_AudioRewind },
 
     { "KP_0",        Qt::Key_0 | Qt::KeypadModifier },
     { "KP_1",        Qt::Key_1 | Qt::KeypadModifier },
