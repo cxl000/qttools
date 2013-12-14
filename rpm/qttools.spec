@@ -154,7 +154,7 @@ applications that use QtDesigner
 
 
 %prep
-%setup -q -n %{name}-%{version}/qttools
+%setup -q -n %{name}-%{version}/upstream
 
 %build
 export QTDIR=/usr/share/qt5
