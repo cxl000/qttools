@@ -39,6 +39,16 @@ Requires(postun):   /sbin/ldconfig
 %description linguist
 This package contains the linguist tool
 
+%package qtpaths
+Summary:    The qtpaths tool
+Group:      Qt/Qt
+Requires:   %{name} = %{version}-%{release}
+Requires(post):     /sbin/ldconfig
+Requires(postun):   /sbin/ldconfig
+
+%description qtpaths
+This package contains the qtpaths tool
+
 %package pixeltool
 Summary:    The pixeltool tool
 Group:      Qt/Qt
@@ -216,6 +226,10 @@ find %{buildroot}%{_libdir} -type f -name '*.prl' \
 %{_datadir}/qt5/phrasebooks/
 %{_libdir}/cmake/Qt5Linguist*
 
+%files qtpaths
+%defattr(-,root,root,-)
+%{_qt5_bindir}/qtpaths
+
 %files pixeltool
 %defattr(-,root,root,-)
 %{_qt5_bindir}/pixeltool
@@ -239,6 +253,7 @@ find %{buildroot}%{_libdir} -type f -name '*.prl' \
 %{_libdir}/libQt5UiTools.a
 %{_libdir}/pkgconfig/Qt5UiTools.pc
 %{_datadir}/qt5/mkspecs/modules/qt_lib_uitools.pri
+%{_datadir}/qt5/mkspecs/modules/qt_lib_uitools_private.pri
 %{_libdir}/cmake/Qt5UiTools/
 
 %files qthelp
@@ -256,6 +271,7 @@ find %{buildroot}%{_libdir} -type f -name '*.prl' \
 %{_libdir}/libQt5Help.so
 %{_libdir}/pkgconfig/Qt5Help.pc
 %{_datadir}/qt5/mkspecs/modules/qt_lib_help.pri
+%{_datadir}/qt5/mkspecs/modules/qt_lib_help_private.pri
 %{_libdir}/cmake/Qt5Help/
 
 %files qtclucene
@@ -268,7 +284,7 @@ find %{buildroot}%{_libdir} -type f -name '*.prl' \
 %{_libdir}/libQt5CLucene.prl
 %{_libdir}/libQt5CLucene.so
 %{_libdir}/pkgconfig/Qt5CLucene.pc
-#%{_datadir}/qt5/mkspecs/modules/qt_lib_clucene.pri
+%{_datadir}/qt5/mkspecs/modules/qt_lib_clucene_private.pri
 # 
 %files qtdesigner
 %defattr(-,root,root,-)
