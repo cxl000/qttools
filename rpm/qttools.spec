@@ -1,7 +1,7 @@
 %define keep_static 1
 Name:       qt5-qttools
 Summary:    Development tools for Qt
-Version:    5.0.2
+Version:    5.2.1
 Release:    1%{?dist}
 Group:      Qt/Qt
 License:    LGPLv2.1 with exception or GPLv3
@@ -252,8 +252,7 @@ find %{buildroot}%{_libdir} -type f -name '*.prl' \
 %{_libdir}/libQt5UiTools.prl
 %{_libdir}/libQt5UiTools.a
 %{_libdir}/pkgconfig/Qt5UiTools.pc
-%{_datadir}/qt5/mkspecs/modules/qt_lib_uitools.pri
-%{_datadir}/qt5/mkspecs/modules/qt_lib_uitools_private.pri
+%{_datadir}/qt5/mkspecs/modules/qt_lib_uitools*.pri
 %{_libdir}/cmake/Qt5UiTools/
 
 %files qthelp
@@ -270,8 +269,7 @@ find %{buildroot}%{_libdir} -type f -name '*.prl' \
 %{_libdir}/libQt5Help.prl
 %{_libdir}/libQt5Help.so
 %{_libdir}/pkgconfig/Qt5Help.pc
-%{_datadir}/qt5/mkspecs/modules/qt_lib_help.pri
-%{_datadir}/qt5/mkspecs/modules/qt_lib_help_private.pri
+%{_datadir}/qt5/mkspecs/modules/qt_lib_help*.pri
 %{_libdir}/cmake/Qt5Help/
 
 %files qtclucene
@@ -284,7 +282,7 @@ find %{buildroot}%{_libdir} -type f -name '*.prl' \
 %{_libdir}/libQt5CLucene.prl
 %{_libdir}/libQt5CLucene.so
 %{_libdir}/pkgconfig/Qt5CLucene.pc
-%{_datadir}/qt5/mkspecs/modules/qt_lib_clucene_private.pri
+%{_datadir}/qt5/mkspecs/modules/qt_lib_clucene*.pri
 # 
 %files qtdesigner
 %defattr(-,root,root,-)
@@ -303,3 +301,5 @@ find %{buildroot}%{_libdir} -type f -name '*.prl' \
 
 #### No changelog section, separate $pkg.changes contains the history
 
+
+   /usr/lib/qt5/bin/qtpaths
