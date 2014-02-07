@@ -1,7 +1,7 @@
 %define keep_static 1
 Name:       qt5-qttools
 Summary:    Development tools for Qt
-Version:    5.0.2
+Version:    5.2.1
 Release:    1%{?dist}
 Group:      Qt/Qt
 License:    LGPLv2.1 with exception or GPLv3
@@ -39,16 +39,6 @@ Requires(postun):   /sbin/ldconfig
 %description linguist
 This package contains the linguist tool
 
-%package qtpaths
-Summary:    The qtpaths tool
-Group:      Qt/Qt
-Requires:   %{name} = %{version}-%{release}
-Requires(post):     /sbin/ldconfig
-Requires(postun):   /sbin/ldconfig
-
-%description qtpaths
-This package contains the qtpaths tool
-
 %package pixeltool
 Summary:    The pixeltool tool
 Group:      Qt/Qt
@@ -59,15 +49,15 @@ Requires(postun):   /sbin/ldconfig
 %description pixeltool
 This package contains the pixeltool tool
 
-#%package kmap2qmap
-#Summary:    The kmap2qmap tool
-#Group:      Qt/Qt
-#Requires:   %{name} = %{version}-%{release}
-#Requires(post):     /sbin/ldconfig
-#Requires(postun):   /sbin/ldconfig
-#
-#%description kmap2qmap
-#This package contains the kmap2qmap tool
+%package kmap2qmap
+Summary:    The kmap2qmap tool
+Group:      Qt/Qt
+Requires:   %{name} = %{version}-%{release}
+Requires(post):     /sbin/ldconfig
+Requires(postun):   /sbin/ldconfig
+
+%description kmap2qmap
+This package contains the kmap2qmap tool
 
 %package qdbus
 Summary:    The qdbus and qdbusviewer tool
@@ -226,17 +216,13 @@ find %{buildroot}%{_libdir} -type f -name '*.prl' \
 %{_datadir}/qt5/phrasebooks/
 %{_libdir}/cmake/Qt5Linguist*
 
-%files qtpaths
-%defattr(-,root,root,-)
-%{_qt5_bindir}/qtpaths
-
 %files pixeltool
 %defattr(-,root,root,-)
 %{_qt5_bindir}/pixeltool
 
-#%files kmap2qmap
-#%defattr(-,root,root,-)
-#%{_qt5_bindir}/kmap2qmap
+%files kmap2qmap
+%defattr(-,root,root,-)
+%{_qt5_bindir}/kmap2qmap
 
 %files qdbus
 %defattr(-,root,root,-)
@@ -253,7 +239,6 @@ find %{buildroot}%{_libdir} -type f -name '*.prl' \
 %{_libdir}/libQt5UiTools.a
 %{_libdir}/pkgconfig/Qt5UiTools.pc
 %{_datadir}/qt5/mkspecs/modules/qt_lib_uitools.pri
-%{_datadir}/qt5/mkspecs/modules/qt_lib_uitools_private.pri
 %{_libdir}/cmake/Qt5UiTools/
 
 %files qthelp
@@ -271,7 +256,6 @@ find %{buildroot}%{_libdir} -type f -name '*.prl' \
 %{_libdir}/libQt5Help.so
 %{_libdir}/pkgconfig/Qt5Help.pc
 %{_datadir}/qt5/mkspecs/modules/qt_lib_help.pri
-%{_datadir}/qt5/mkspecs/modules/qt_lib_help_private.pri
 %{_libdir}/cmake/Qt5Help/
 
 %files qtclucene
@@ -284,7 +268,7 @@ find %{buildroot}%{_libdir} -type f -name '*.prl' \
 %{_libdir}/libQt5CLucene.prl
 %{_libdir}/libQt5CLucene.so
 %{_libdir}/pkgconfig/Qt5CLucene.pc
-%{_datadir}/qt5/mkspecs/modules/qt_lib_clucene_private.pri
+%{_datadir}/qt5/mkspecs/modules/qt_lib_clucene*.pri
 # 
 %files qtdesigner
 %defattr(-,root,root,-)
